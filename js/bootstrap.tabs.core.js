@@ -6,17 +6,19 @@
  *
  * @return {object}
  */
-var BootstrapTabs = (function(element, prefix) {
+window.BootstrapTabs = (function(element, prefix) {
     'use strict';
 
+    var version = '0.0.6';
+
     var globals = {
-        id: null,
+        id:     null,
         prefix: 'w2w_tab_'
     };
 
     // Array with the default elements for the bootstrap tabs.
     var elements = {
-        error: '.has-error',
+        error:   '.has-error',
         tabPage: '.tab-pane',
         tabItem: 'a[data-toggle="tab"]'
     };
@@ -124,12 +126,13 @@ var BootstrapTabs = (function(element, prefix) {
     functions.getId();
 
     return {
-        element: element,
-        active: functions.active,
-        errors: functions.errors,
+        element:  element,
+        active:   functions.active,
+        errors:   functions.errors,
         elements: elements,
-        listen: functions.listen,
-        open: functions.open,
-        id: globals.id
+        listen:   functions.listen,
+        open:     functions.open,
+        id:       globals.id,
+        version:  version
     };
 });
