@@ -4,7 +4,8 @@ With this function you can add more functions to the bootstrap tabs.
 
 You can add the functions like:
 ```
-var test = new Way2web.BootstrapTab.Init(element).listen();
+var prefix = 'w2w_tab_';
+var test = new BootstrapTabs(element, prefix).listen();
 ```
 
 Now you can open a tab manual with:
