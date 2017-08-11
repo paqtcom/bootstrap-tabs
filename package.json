@@ -1,0 +1,25 @@
+{
+    "name": "way2web-bootstrap-tabs",
+    "version": "0.0.5",
+    "description": "Extend the bootstrap tabs, store the last open tab.",
+    "files": [
+        "js/bootstrap.tabs.core.js"
+    ],
+    "main": "js/bootstrap.tabs.core.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Way2WebPieter/BootstrapTabs.git"
+    },
+    "keywords": [
+        "bootstrap",
+        "tabs",
+        "javascript"
+    ],
+    "author": "Pieter Wigboldus",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/Way2WebPieter/BootstrapTabs/issues"
+    },
+    "homepage": "https://github.com/Way2WebPieter/BootstrapTabs#readme",
+    "dependencies": {}
+}
