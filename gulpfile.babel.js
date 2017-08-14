@@ -54,6 +54,14 @@ export const taskConfig = {
     scripts: [
         new Task(
             [
+                'jquery/dist/jquery.js',
+                'bootstrap-sass/assets/javascripts/bootstrap.min.js',
+            ],
+            folders.npm,
+            dist.scripts + 'vendor.js'
+        ),
+        new Task(
+            [
                 'bootstrap.tabs.core.js'
             ],
             folders.scripts,
