@@ -1,0 +1,61 @@
+<!doctype html>
+<title>way2web-bootstrap-tabs</title>
+<link rel="stylesheet" href="../dist/css/main.css">
+
+<div data-w2w-tabs="test">
+    <ul class="nav nav-tabs | js-tabs">
+        <li class="active">
+            <a href="#tab1"
+               aria-controls="#tab1"
+               role="tab"
+               data-toggle="tab"
+            >
+                Tab 1
+            </a>
+        </li>
+        <li>
+            <a href="#tab2"
+               aria-controls="#tab2"
+               role="tab"
+               data-toggle="tab"
+            >
+                Tab 2
+            </a>
+        </li>
+        <li>
+            <a href="#tab3"
+               aria-controls="#tab3"
+               role="tab"
+               data-toggle="tab"
+            >
+                Tab 3
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content tab-content-padded tab-content-bordered">
+        <div id="tab1"
+             role="tabpanel"
+             class="tab-pane active"
+        >
+            Tab 1 text
+        </div>
+        <div id="tab2"
+             role="tabpanel"
+             class="tab-pane"
+        >
+            Tab 2 text
+        </div>
+        <div id="tab3"
+             role="tabpanel"
+             class="tab-pane"
+        >
+            Tab 3 text
+        </div>
+
+    </div>
+</div>
+
+<script src="../dist/js/vendor.js"></script>
+<script src="../dist/js/app.js"></script>
+<script src="way2web.js"></script>
+<script src="way2web.tabs.js"></script>

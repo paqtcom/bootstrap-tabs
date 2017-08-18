@@ -1,0 +1,34 @@
+/*
+ * # Tools
+ * Abstract functions for  getting or modifying data
+ */
+@import 'tools/functions';
+@import 'tools/lengths';
+@import 'tools/svg';
+
+/*
+ * # Settings
+ * All the project settings
+ */
+@import 'settings/private';
+@import 'settings/colors';
+@import 'settings/font';
+@import 'settings/spacing';
+@import 'settings/border';
+@import 'settings/settings';
+@import 'settings/bootstrap';
+@import 'settings/bootstrap-theme';
+
+/*
+ * # Frameworks
+ * Include Bootstrap
+ */
+@import 'bootstrap-sass/assets/stylesheets/bootstrap';
+
+@import 'mixins/utilities';
+
+/*
+ * # Generic
+ * Styling for all elements, like resets or normalizing
+ */
+@import 'generic/reset-bootstrap';
