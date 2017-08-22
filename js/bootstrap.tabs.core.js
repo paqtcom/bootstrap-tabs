@@ -9,7 +9,7 @@
 window.BootstrapTabs = (function(element, prefix) {
     'use strict';
 
-    var version = '0.1.1';
+    var version = '0.1.2';
 
     var globals = {
         id:     null,
