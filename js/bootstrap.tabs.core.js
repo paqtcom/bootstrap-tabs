@@ -9,11 +9,12 @@
 window.BootstrapTabs = (function(element, prefix) {
     'use strict';
 
-    var version = '0.1.2';
+    var version = '0.1.3';
 
     var globals = {
-        id:     null,
-        prefix: 'w2w_tab_'
+        id:       null,
+        prefix:   'w2w_tab_',
+        autoOpen: true
     };
 
     // Array with the default elements for the bootstrap tabs.
@@ -44,6 +45,22 @@ window.BootstrapTabs = (function(element, prefix) {
          * If there is an error in a tab, switch to that tab.
          */
         reload: function() {
+            var tab = functions.getTab();
+            var errors = functions.errors();
+
+            if (!errors.length && !globals.autoOpen) {
+                return;
+            }
+
+            functions.open(tab);
+        },
+
+        /**
+         * Get the tab id that needs to be opened.
+         *
+         * @return {string}
+         */
+        getTab: function() {
             var tab = localStorage.getItem(globals.prefix + globals.id);
             var errorTabs = functions.errors();
 
@@ -51,7 +68,7 @@ window.BootstrapTabs = (function(element, prefix) {
                 tab = '#' + errorTabs[0];
             }
 
-            functions.open(tab);
+            return tab;
         },
 
         /**
@@ -110,7 +127,9 @@ window.BootstrapTabs = (function(element, prefix) {
         /**
          * The id wil get the attribute for the name in the localstorage.
          */
-        getId: function() {
+        setGlobals: function() {
+            var autoOpen = element.parent().data('w2w-auto-open');
+
             globals.id = element.parent().data('w2w-tabs');
 
             if (!globals.id) {
@@ -120,10 +139,14 @@ window.BootstrapTabs = (function(element, prefix) {
             if(prefix) {
                 globals.prefix = prefix;
             }
+
+            if (autoOpen !== undefined) {
+                globals.autoOpen = autoOpen;
+            }
         }
     };
 
-    functions.getId();
+    functions.setGlobals();
 
     return {
         element:  element,
