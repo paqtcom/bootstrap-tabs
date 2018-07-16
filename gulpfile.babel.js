@@ -16,7 +16,7 @@ import { packageOptions, gulpOptions } from './gulp/bootstrap/config';
 
 const paths = {
     root: './',
-    dist: `./dist/`
+    dist: `./public_html/`
 };
 
 export const folders = {
