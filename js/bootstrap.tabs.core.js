@@ -9,7 +9,7 @@
 window.BootstrapTabs = (function(element, prefix) {
     'use strict';
 
-    var version = '0.1.3';
+    var version = '0.2.0';
 
     var globals = {
         id:       null,
@@ -159,3 +159,7 @@ window.BootstrapTabs = (function(element, prefix) {
         version:  version
     };
 });
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = window.BootstrapTabs;
+}
