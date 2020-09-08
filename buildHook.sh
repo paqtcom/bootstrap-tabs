@@ -17,7 +17,7 @@ if [ -f ~/.nvm/nvm.sh ]; then
     . ~/.nvm/nvm.sh
 fi
 
-nvm use 6
+nvm use 14
 
 echo "====== Running build hook ======="
 
@@ -27,8 +27,8 @@ cd $path/$gulpfile
 if [ -f package.json ]; then
     find . -maxdepth 1 -name package.json | grep package > /dev/null 2>&1
     if [ $? == 0 ]; then
-        echo "= yarn ="
-        yarn install
+        echo "= npm ="
+        npm install
         if [ $? != 0 ]; then
             exit 1
         fi
@@ -36,7 +36,7 @@ if [ -f package.json ]; then
 
     if [ -f node_modules/gulp/bin/gulp.js ]; then
         echo "= gulp ="
-        node_modules/gulp/bin/gulp.js $continueFlag
+        npm run build $continueFlag
         if [ $? != 0 ]; then
             exit 1
         fi
