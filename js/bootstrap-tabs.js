@@ -112,8 +112,6 @@ window.BootstrapTabs = (function(element, prefix) {
         open: function(tab) {
             element.find('a[href="' + tab + '"]').tab('show');
             localStorage.setItem(globals.prefix + globals.id, tab);
-
-            console.log("TOM")
         },
 
         /**
