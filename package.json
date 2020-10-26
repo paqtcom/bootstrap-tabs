@@ -57,6 +57,6 @@
     },
     "dependencies": {
         "jquery": ">=3.2.1",
-        "bootstrap-sass": "3.3.7"
+        "bootstrap-sass": "3.4.1"
     }
 }
