@@ -1,14 +1,25 @@
 {
     "name": "way2web-bootstrap-tabs",
-    "version": "0.2.0",
+    "version": "1.0.0",
     "description": "Extend the bootstrap tabs, store the last open tab.",
     "files": [
-        "js/bootstrap.tabs.core.js"
+        "js/bootstrap-tabs.js",
+        "dist/bootstrap-tabs.js",
+        "dist/bootstrap-tabs.js.map",
+        "dist/bootstrap-tabs.module.js",
+        "dist/bootstrap-tabs.module.js.map",
+        "dist/bootstrap-tabs.modern.js",
+        "dist/bootstrap-tabs.modern.js.map",
+        "dist/bootstrap-tabs.umd.js",
+        "dist/bootstrap-tabs.umd.js.map"
     ],
-    "main": "js/bootstrap.tabs.core.js",
+    "source": "js/bootstrap-tabs.js",
+    "main": "dist/bootstrap-tabs.js",
+    "module": "dist/bootstrap-tabs.module.js",
+    "unpkg": "dist/bootstrap-tabs.umd.js",
     "repository": {
         "type": "mercurial",
-        "url": "https://bitbucket.org/way2dev/bootstrap-tabs"
+        "url": "https://github.com/Way2Web/bootstrap-tabs.git"
     },
     "keywords": [
         "bootstrap",
@@ -20,43 +31,25 @@
         "url": "https://www.way2web.nl/"
     },
     "license": "MIT",
-    "homepage": "https://bitbucket.org/way2dev/bootstrap-tabs#readme",
+    "homepage": "https://github.com/Way2Web/bootstrap-tabs.git#readme",
     "scripts": {
-        "build": "node_modules/gulp/bin/gulp.js",
-        "lint": "eslint js/*.js --config .eslintrc",
+        "build": "microbundle",
+        "dev": "microbundle watch",
+        "lint": "eslint src/*.js --config .eslintrc",
         "publish-to-npm": "./bitbucket-pipelines/npm.sh"
     },
     "devDependencies": {
-        "autoprefixer": "6.7.2",
-        "babel-preset-es2015": "6.22.0",
-        "babel-register": "6.22.0",
-        "browser-sync": "^2.26.12",
-        "del": "2.2.2",
-        "gulp": "^4.0",
-        "gulp-autoprefixer": "3.1.1",
-        "gulp-clean-css": "3.0.0",
-        "gulp-concat": "2.6.1",
-        "gulp-data": "1.2.1",
-        "gulp-eslint": "3.0.1",
-        "gulp-modernizr": "1.0.0-alpha",
-        "gulp-postcss": "6.3.0",
-        "gulp-rev": "7.1.2",
-        "gulp-sass": "3.1.0",
-        "gulp-sourcemaps": "2.4.1",
-        "gulp-stylelint": "3.7.0",
-        "gulp-uglify": "2.0.1",
-        "merge-stream": "1.0.1",
-        "node-notifier": "5.1.2",
-        "parse-filepath": "1.0.1",
-        "postcss-reporter": "1.3.3",
-        "postcss-scss": "0.1.8",
-        "postcss-urlrewrite": "0.2.1",
-        "rev-del": "1.0.5",
-        "stylelint-config-sass-guidelines": "1.1.0",
-        "stylelint-scss": "1.3.4"
+        "@babel/core": "^7.11.6",
+        "@babel/preset-env": "^7.11.5",
+        "@babel/register": "^7.11.5",
+        "babel-core": "^7.0.0-bridge.0",
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "microbundle": "^0.12.3",
+        "prettier": "^1.19.1"
     },
     "dependencies": {
-        "jquery": ">=3.2.1",
-        "bootstrap-sass": "3.3.7"
+        "bootstrap-sass": "3.4.1"
     }
 }

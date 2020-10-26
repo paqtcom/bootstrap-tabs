@@ -9,7 +9,7 @@
 window.BootstrapTabs = (function(element, prefix) {
     'use strict';
 
-    var version = '0.2.0';
+    var version = '1.0.0';
 
     var globals = {
         id:       null,
@@ -112,6 +112,8 @@ window.BootstrapTabs = (function(element, prefix) {
         open: function(tab) {
             element.find('a[href="' + tab + '"]').tab('show');
             localStorage.setItem(globals.prefix + globals.id, tab);
+
+            console.log("TOM")
         },
 
         /**
