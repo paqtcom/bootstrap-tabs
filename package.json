@@ -1,6 +1,6 @@
 {
     "name": "way2web-bootstrap-tabs",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Extend the bootstrap tabs, store the last open tab.",
     "files": [
         "js/bootstrap-tabs.js",
