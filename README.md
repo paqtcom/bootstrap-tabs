@@ -1,6 +1,8 @@
 # BootstrapTabs
 
 [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url]
+> **⚠ WARNING: No maintenance intended**  
+> This package is not actively maintained.
 
 With this function you can add more functions to the bootstrap tabs.
 
